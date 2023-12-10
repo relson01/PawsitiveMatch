@@ -20,3 +20,5 @@ app.listen(port, () => {
   // initializaDb();
   console.log(`Server is Fire at http://localhost:${port}`);
 });
+
+export default app;
