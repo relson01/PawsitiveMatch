@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { initializaDb } from "../db";
 import mysql from "mysql";
 import { v4 as uuid } from "uuid";
+import cors from "cors";
 
 // import { initializaDb } from "../db";
 
@@ -12,6 +13,7 @@ dotenv.config();
 const app: Application = express();
 const port = process.env.PORT || 8000;
 app.use(express.json());
+app.use(cors());
 
 const connection = mysql.createConnection({
   host: "db4free.net",
